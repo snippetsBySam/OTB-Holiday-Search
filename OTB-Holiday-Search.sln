@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTB-Holiday-Search", "OTB-Holiday-Search\OTB-Holiday-Search.csproj", "{B4CAA427-7D27-4BC1-AA17-E560A26514BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E554FE4-4BBE-4456-B8ED-5C6A899EE13D}
+	EndGlobalSection
+EndGlobal
