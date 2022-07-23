@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTB-Holiday-Search", "OTB-Holiday-Search\OTB-Holiday-Search.csproj", "{B4CAA427-7D27-4BC1-AA17-E560A26514BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTB-Holiday-Search-Tests", "OTB-Holiday-Search-Tests\OTB-Holiday-Search-Tests.csproj", "{248A77E1-6561-4DB7-A3BD-2AF0599CEF28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4CAA427-7D27-4BC1-AA17-E560A26514BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{248A77E1-6561-4DB7-A3BD-2AF0599CEF28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248A77E1-6561-4DB7-A3BD-2AF0599CEF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248A77E1-6561-4DB7-A3BD-2AF0599CEF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248A77E1-6561-4DB7-A3BD-2AF0599CEF28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
