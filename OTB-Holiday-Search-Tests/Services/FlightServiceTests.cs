@@ -26,8 +26,8 @@ namespace OTB_Holiday_Search_Tests.Services
         [Test]
         public void GetFlightsFromJson_Returns_List_Of_Flight_Type()
         {
-            var returnedFlights = _mockFlightService.GetFlightsFromJson;
-            returnedFlights.Should().BeOfType(typeof(List<Flight>));
+            var returnedFlights = _mockFlightService.GetFlightsFromJson();
+            returnedFlights.Should().BeOfType<List<Flight>>();
         }
     }
 }
