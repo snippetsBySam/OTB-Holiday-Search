@@ -21,5 +21,22 @@ namespace OTB_Holiday_Search.Models
         public string[] LocalAirports { get; set; }
         [JsonPropertyName("nights")]
         public int Nights { get; set; }
+
+        public Hotel()
+        {
+        }
+
+        public Hotel(int id, string name, DateTime arrivalDate, decimal pricePerNight, string[] localAirports, int nights)
+        {
+            Id = id;
+            Name = name;
+            ArrivalDate = arrivalDate;
+            PricePerNight = pricePerNight;
+            LocalAirports = localAirports;
+            Nights = nights;
+        }
+
+
+        
     }
 }
