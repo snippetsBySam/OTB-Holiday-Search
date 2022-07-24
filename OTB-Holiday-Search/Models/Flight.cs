@@ -21,5 +21,17 @@ namespace OTB_Holiday_Search.Models
         public decimal Price { get; set; }
         [JsonPropertyName("departure_date")]
         public DateTime DepartureDate { get; set; }
+
+        public Flight() { }
+        public Flight(int id, string airline, string from, string to, decimal price, DateTime departureDate)
+        {
+            Id = id;
+            Airline = airline;
+            From = from;
+            To = to;
+            Price = price;
+            DepartureDate = departureDate;
+        }
+
     }
 }

@@ -29,5 +29,24 @@ namespace OTB_Holiday_Search_Tests.Services
             var returnedFlights = _mockFlightService.GetFlightsFromJson();
             returnedFlights.Should().BeOfType<List<Flight>>();
         }
+
+        [Test]
+        public void GetFlightsFromJson_Returns_Correct_Count_Of_Flights()
+        {
+            var returnedFlights = _mockFlightService.GetFlightsFromJson(_dummyFileData);
+            returnedFlights.Count.Should().Be(12);
+        }
+
+        [Test]
+        public void GetFlightsFromJson_Returns_Correct_Data()
+        {
+            var returnedFlights = _mockFlightService.GetFlightsFromJson(_dummyFileData);
+
+            var testFlight1 = new Flight(1, "First Class Air", "MAN", "TFS", 470, DateTime.Parse("2023-07-01"));
+            var testFlight2 = new Flight(2, "Oceanic Airlines", "MAN", "AGP", 245, DateTime.Parse("2023-07-01"));
+
+            returnedFlights[0].Should().BeEquivalentTo(testFlight1);
+            returnedFlights[1].Should().BeEquivalentTo(testFlight2);
+        }
     }
 }
