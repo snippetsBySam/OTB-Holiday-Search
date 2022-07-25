@@ -28,7 +28,7 @@ namespace OTB_Holiday_Search.Models.Search
             BuildResult();
         }
 
-        public List<HolidayResult> GetResultsDefault()
+        public List<HolidayResult> Results()
         {
             return this._holidayResult;
         }

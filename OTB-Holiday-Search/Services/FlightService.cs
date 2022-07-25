@@ -15,9 +15,9 @@ namespace OTB_Holiday_Search.Services
             string jsonToParse;
             if (string.IsNullOrEmpty(jsonString))
             {
-                if (File.Exists("flights.json"))
+                if (File.Exists("../../../../flights.json"))
                 {
-                    jsonToParse = GetFileString("flights.json"); 
+                    jsonToParse = GetFileString("../../../../flights.json"); 
                 }
                 else
                 {
