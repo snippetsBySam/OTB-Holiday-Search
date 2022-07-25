@@ -18,13 +18,9 @@ namespace OTB_Holiday_Search.Models.Search
         public HolidaySearch(HolidayQuery query)
         {
 
-            this._matchingFlights = new FlightService().GetFlightsFromJson().Where(flight =>
-                query.DepartingFrom.Any(location => location == flight.From) &&
-                query.TravellingTo == flight.To &&
-                query.DepartureDate == flight.DepartureDate).ToList();
-            this._matchingHotels = new HotelService().GetHotelsFromJson().Where(hotel =>
-                hotel.LocalAirports.Any(airports => airports == query.TravellingTo) &&
-                query.DepartureDate == hotel.ArrivalDate).ToList();
+            this._matchingFlights = SearchHelper.FlightsSearch(new FlightService().GetFlightsFromJson(), query)
+;
+            this._matchingHotels = SearchHelper.HotelsSearch(new HotelService().GetHotelsFromJson(), query);
             BuildResult();
         }
 
