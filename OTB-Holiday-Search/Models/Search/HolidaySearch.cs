@@ -30,7 +30,7 @@ namespace OTB_Holiday_Search.Models.Search
 
         public List<HolidayResult> Results()
         {
-            return this._holidayResult;
+            return ResultsSorter.BestValue(this._holidayResult);
         }
         private void BuildResult()
         {
