@@ -45,5 +45,22 @@ namespace OTB_Holiday_Search_Tests.Models.Search
             _testSearch = new HolidaySearch(_testQuery);
             SearchHelper.FlightsSearch(new FlightService().GetFlightsFromJson(), _testQuery).Count.Should().Be(3);
         }
+
+        [Test]
+        public void HotelsSearch_Returns_Correct_Type()
+        {
+            _testQuery = new HolidayQuery(new[] { "MAN" }, "AGP", DateTime.Parse("2023/07/01"), 7);
+            _testSearch = new HolidaySearch(_testQuery);
+            SearchHelper.HotelsSearch(new HotelService().GetHotelsFromJson(), _testQuery).Should().BeOfType<List<Hotel>>();
+        }
+
+        [Test]
+        public void HotelsSearch_Returns_Correct_Count()
+        {
+            _testQuery = new HolidayQuery(new[] { "MAN" }, "AGP", DateTime.Parse("2023/07/01"), 7);
+            _testSearch = new HolidaySearch(_testQuery);
+            SearchHelper.HotelsSearch(new HotelService().GetHotelsFromJson(), _testQuery).Count.Should().Be(2);
+        }
+
     }
 }
