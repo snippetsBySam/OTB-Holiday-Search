@@ -12,6 +12,7 @@ namespace OTB_Holiday_Search.Services
     {
         public List<Hotel> GetHotelsFromJson(string jsonString = "")
         {
+            List<Hotel> result;
             string jsonToParse;
             if (string.IsNullOrEmpty(jsonString))
             {
@@ -29,7 +30,16 @@ namespace OTB_Holiday_Search.Services
             {
                 jsonToParse = jsonString;
             }
-            return JsonSerializer.Deserialize<List<Hotel>>(jsonToParse)!;
+            try
+            {
+                result = JsonSerializer.Deserialize<List<Hotel>>(jsonToParse)!;
+            }
+            catch (System.Text.Json.JsonException)
+            {
+
+                throw new Exception("Invalid hotel JSON file");
+            }
+            return result;
         }
 
         public string GetFileString(string fileLocation)

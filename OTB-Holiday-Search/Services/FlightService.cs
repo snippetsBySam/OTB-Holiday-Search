@@ -12,6 +12,7 @@ namespace OTB_Holiday_Search.Services
     {
         public List<Flight> GetFlightsFromJson(string jsonString = "")
         {
+            List<Flight> result;
             string jsonToParse;
             if (string.IsNullOrEmpty(jsonString))
             {
@@ -29,7 +30,16 @@ namespace OTB_Holiday_Search.Services
             {
                 jsonToParse = jsonString;
             }
-            return JsonSerializer.Deserialize<List<Flight>>(jsonToParse)!;
+            try
+            {
+                result = JsonSerializer.Deserialize<List<Flight>>(jsonToParse)!;
+            }
+            catch (System.Text.Json.JsonException)
+            {
+
+                throw new Exception("Invalid flight JSON file");
+            }
+            return result;
         }
 
         public string GetFileString(string fileLocation)
