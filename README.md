@@ -5,7 +5,14 @@ It takes in two JSON files as input, which contain hotel data and flight data, a
 
 ## Usage
 
-The code can be run by cloning this repository and launching the solution file in Visual Studio. The customer test cases can be found in the `Program.cs` file. Additional customer tests can be added by using the format of the existing ones
+The code can be run by cloning this repository and launching the solution file in Visual Studio. The customer test cases can be found in the `Program.cs` file. Additional customer tests can be added by using the format of the existing ones.
+
+Sample Input:
+![Sample Query](./images/sampleQuery.PNG)
+
+
+Sample Output:
+![Sample Query](./images/sampleResult.PNG)
 
 ## Structure
 
