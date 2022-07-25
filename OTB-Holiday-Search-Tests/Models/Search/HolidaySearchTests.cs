@@ -36,6 +36,33 @@ namespace OTB_Holiday_Search_Tests.Models.Search
             _testSearch.Results().Count().Should().Be(2);
         }
 
+        [Test]
+        public void Customer1_Case_Returns_Correct_Result()
+        {
+            _testQuery = new HolidayQuery(new[] { "MAN" }, "AGP", DateTime.Parse("2023/07/01"), 7);
+            _testSearch = new HolidaySearch(_testQuery);
+            _testSearch.Results().First().Flight.Id.Should().Be(2);
+            _testSearch.Results().First().Hotel.Id.Should().Be(9);
+        }
+
+        [Test]
+        public void Customer2_Case_Returns_Correct_Result()
+        {
+            _testQuery = new HolidayQuery(new[] { "LTN", "LGW" }, "PMI", DateTime.Parse("2023/06/15"), 107);
+            _testSearch = new HolidaySearch(_testQuery);
+            _testSearch.Results().First().Flight.Id.Should().Be(6);
+            _testSearch.Results().First().Hotel.Id.Should().Be(5);
+        }
+
+        [Test]
+        public void Customer3_Case_Returns_Correct_Result()
+        {
+            _testQuery = new HolidayQuery(new[] { "any" }, "LPA", DateTime.Parse("2022/11/10"), 14);
+            _testSearch = new HolidaySearch(_testQuery);
+            _testSearch.Results().First().Flight.Id.Should().Be(7);
+            _testSearch.Results().First().Hotel.Id.Should().Be(6);
+        }
+
 
     }
 }
