@@ -8,42 +8,26 @@ namespace OTB_Holiday_Search.Models.Result
 {
     public class HolidayResult
     {
-        public int FlightId { get; set; }
-        public string FlightDepartingFrom { get; set; }
-        public string FlightTravellingTo { get; set; }
-        public decimal FlightPrice { get; set; }
-        public DateTime FlightDate { get; set; }
-        public int HotelId { get; set; }
-        public string HotelName { get; set; }
-        public DateTime ArrivalDate { get; set; }
-        public decimal HotelPricePerNight { get; set; }
-        public int HotelDuration { get; set; }
+        public Flight Flight { get; set; }
+        public Hotel Hotel { get; set; }
         public decimal TotalHotelPrice
         {
-            get => HotelPricePerNight * HotelDuration;
+            get => Hotel.PricePerNight * Hotel.Nights;
         }
         public decimal HolidayPrice
         {
-            get => FlightPrice + TotalHotelPrice;
+            get => Flight.Price + TotalHotelPrice;
         }
 
         public HolidayResult(Flight flight, Hotel hotel)
         {
-            FlightId = flight.Id;
-            FlightDepartingFrom = flight.From;
-            FlightTravellingTo = flight.To;
-            FlightPrice = flight.Price;
-            FlightDate = flight.DepartureDate;
-            HotelId = hotel.Id;
-            HotelName = hotel.Name;
-            ArrivalDate = hotel.ArrivalDate;
-            HotelPricePerNight = hotel.PricePerNight;
-            HotelDuration = hotel.Nights;
+            Flight = flight;
+            Hotel = hotel;
         }
 
         public override string ToString()
         {
-            return $"Flight {FlightId} and Hotel {HotelId}. Total Cost {HolidayPrice:C2}";
+            return $"Flight {Flight.Id} and Hotel {Hotel.Id}. Total Cost {HolidayPrice:C2}";
         }
     }
 }
