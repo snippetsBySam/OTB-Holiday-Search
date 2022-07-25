@@ -18,4 +18,4 @@ Sample Output:
 
 ## Structure
 
-The library consists of 2 projects. One for the Search app and another for all the tests. The test project uses the same folder hierachy as the main project and all classes have their corresponsing test files (where relevant).
+The library consists of 2 projects. One for the Search app and another for all the tests. The test project uses the same folder hierachy as the main project and all classes have their corresponding test files (where relevant).
