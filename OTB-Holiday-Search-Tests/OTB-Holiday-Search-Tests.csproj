@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Folder Include="Models\Search\" />
-    <Folder Include="Models\Result\" />
   </ItemGroup>
 
   <ItemGroup>
