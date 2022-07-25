@@ -28,11 +28,23 @@ namespace OTB_Holiday_Search_Tests.Models.Result
         }
 
         [Test]
+        public void TotalHotelPrice_Returns_Correct_Type()
+        {
+            _holidayResult.TotalHotelPrice.Should().BeOfType(typeof(decimal));
+        }
+
+        [Test]
         public void TotalHotelPrice_Returns_Correct_Value()
         {
             var expectedHotelPrice = _testHotel.PricePerNight * _testHotel.Nights;
             var result = _holidayResult.TotalHotelPrice;
             expectedHotelPrice.Should().Be(result);
+        }
+
+        [Test]
+        public void TotalHolidayPrice_Returns_Correct_Type()
+        {            
+            _holidayResult.HolidayPrice.Should().BeOfType(typeof(decimal));
         }
         [Test]
         public void TotalHolidayPrice_Returns_Correct_Value()
