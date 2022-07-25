@@ -19,7 +19,7 @@ Console.WriteLine(holidaySearch.Results().First().ToString());
 
 
 // Customer 3
-holidayQuery = new HolidayQuery(new[] { "any", "LGW" }, "LPA", DateTime.Parse("2022/11/10"), 14);
+holidayQuery = new HolidayQuery(new[] {"any"}, "LPA", DateTime.Parse("2022/11/10"), 14);
 holidaySearch = new HolidaySearch(holidayQuery);
 Console.WriteLine($"\nCustomer 3: From Any Airport, to Gran Canaria Airport (LPA) on 2022/11/10 for 14 days.");
 Console.WriteLine(holidaySearch.Results().First().ToString());
