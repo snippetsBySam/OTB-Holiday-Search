@@ -40,5 +40,10 @@ namespace OTB_Holiday_Search.Models.Result
             HotelPricePerNight = hotel.PricePerNight;
             HotelDuration = hotel.Nights;
         }
+
+        public override string ToString()
+        {
+            return $"Flight {FlightId} and Hotel {HotelId}. Total Cost {HolidayPrice:C2}";
+        }
     }
 }
